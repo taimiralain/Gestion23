@@ -1,4 +1,18 @@
-# Proyecto Django de Gestión de Órdenes
+<p align="center">
+ <h2 align="center">Proyecto Django de Gestión de Órdenes </h2>
+</p>
+  <p align="center">
+    <a href="https://github.com/taimiralain/Gestion23/issues">
+      <img alt="Issues" src="https://img.shields.io/github/issues/taimiralain/FrontEnd" />
+    </a>
+    <a href="https://github.com/taimiralain/Gestion23/network/members">
+      <img alt="Fork" src="https://img.shields.io/github/forks/taimiralain/FrontEnd" />
+    </a>
+    <a href="https://github.com/taimiralain/Gestion23/stargazers">
+      <img alt="Stars" src="https://img.shields.io/github/stars/taimiralain/FrontEnd" />
+    </a>
+ 
+  </p>
 
 Este proyecto es un sistema de microservicio para gestionar la ubicación de órdenes en un Centro de Distribución (CD).
 

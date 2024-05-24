@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página de Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 70%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 1rem;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .card h3 {
+            color: #333;
+            padding: 1.5rem;
+            margin: 0;
+            text-align: center;
+        }
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .card ul li {
+            padding: 0.5rem 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        .card ul li:last-child {
+            border: none;
+        }
+        .card ul li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            transition: all 0.3s ease-in-out;
+        }
+        .card ul li a:hover {
+            padding-left: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>URLs Disponibles</h1>
+        
+        <!-- Tarjeta para Clientes -->
+        <div class="card">
+            <h3>Clientes</h3>
+            <ul>
+                <li><a href="{% url 'cliente-list-create' %}">Crear Cliente</a></li>
+            </ul>
+        </div>
+
+        <!-- Tarjeta para Órdenes de Compra -->
+        <div class="card">
+            <h3>Órdenes de Compra</h3>
+            <ul>
+                <li><a href="{% url 'crear-orden-compra' %}">Crear Orden de Compra</a></li>
+                <li><a href="{% url 'orden-compra-list-create' %}">Listar Orden de Compra</a></li>
+                <li><a href="{% url 'orden-compra-detail' pk=1 %}">Detalles Orden de Compra</a></li>
+            </ul>
+        </div>
+
+        <!-- Tarjeta para Almacenes -->
+        <div class="card">
+            <h3>Almacenes</h3>
+            <ul>
+                <li><a href="{% url 'almacen-list-create' %}">Listar y Crear Almacenes</a></li>
+                <li><a href="{% url 'almacen-detail-update-delete' pk=1 %}">Detalle, Actualizar y Eliminar Almacén</a></li>
+            </ul>
+        </div>
+
+        <!-- Tarjeta para Productos -->
+        <div class="card">
+            <h3>Productos</h3>
+            <ul>
+                <li><a href="{% url 'producto-list-create' %}">Listar y Crear Productos</a></li>
+                <li><a href="{% url 'producto-detail-update-delete' pk=1 %}">Detalle, Actualizar y Eliminar Producto</a></li>
+            </ul>
+        </div>
+
+        <!-- Tarjeta para Bolsas de Órdenes -->
+        <div class="card">
+            <h3>Bolsas de Órdenes</h3>
+            <ul>
+                <li><a href="{% url 'bolsa-ordenes-crear' %}">Crear Bolsa de Órdenes</a></li>
+                <li><a href="{% url 'bolsa-ordenes-detalle' codigo='codigo_bolsa' %}">Detalle de Bolsa de Órdenes</a></li>
+            </ul>
+        </div>
+
+        <!-- Tarjeta para Centro de Distribución -->
+        <div class="card">
+            <h3>Centro de Distribución</h3>
+            <ul>
+                <li><a href="{% url 'centro-distribucion-actualizar' pk=1 %}">Actualizar Centro de Distribución</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
